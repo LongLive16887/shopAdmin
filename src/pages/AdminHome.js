@@ -3,7 +3,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 
 const AdminHome = () => {
-  const [setIsLoggedIn] = useState(true); 
+  const [loggedIn,setIsLoggedIn] = useState(true); 
   const location = useLocation();
 
   const handleLogout = () => {

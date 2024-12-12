@@ -15,10 +15,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    if (!captchaVerified) {
-      toast.error("Please verify the CAPTCHA.");
-      return;
-    }
 
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -72,16 +68,9 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <ReCAPTCHA
-          sitekey="6Lf63EoqAAAAAJLVIpWdZmg-pri-kVm-Lw2a2m5E" 
-          onChange={handleCaptchaVerification}
-          ref={recaptchaRef} 
-          className="mb-4"
-        />
         <button
           className="bg-blue-500 text-white p-2 w-full rounded hover:bg-blue-600"
           onClick={handleLogin}
-          disabled={!captchaVerified}
         >
           Login
         </button>
