@@ -3,12 +3,13 @@ import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"; 
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: "AIzaSyDQsKyQyizEMk0snPpg_zPl-VsjIneqngA",
+  authDomain: "mirshod-e8a7f.firebaseapp.com",
+  projectId: "mirshod-e8a7f",
+  storageBucket: "mirshod-e8a7f.firebasestorage.app",
+  messagingSenderId: "651399584576",
+  appId: "1:651399584576:web:563591416f5c44bd9138a5",
+  measurementId: "G-THSZ45WCK2"
 };
 
 const app = initializeApp(firebaseConfig);
